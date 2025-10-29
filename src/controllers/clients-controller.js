@@ -3,7 +3,7 @@ import { Client } from "../models/Clients"
 export const clientsController = {
     // GET /clients
     index: async (req, res) => {
-        const products = await Client.findaAll();
+        const products = await Client.findAll();
 
         return res.json(products);
     },
