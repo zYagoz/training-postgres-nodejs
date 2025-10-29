@@ -1,5 +1,5 @@
 const validateEmailName = (req, res, next) =>{
-    const {name, email} = req.params;
+    const {name, email} = req.body;
     if(!name || !email) return res.staus(400).message({
         message: `Nome e Email devem ser fornecidos`
     });
