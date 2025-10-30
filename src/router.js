@@ -21,3 +21,5 @@ router.delete('/products/:id', middlewareId, clientsController.delete);
 
 router.get('/orders', ordersController.index);
 router.post('/orders', ordersController.create);
+router.get('/orders/:id', ordersController.show);
+router.delete('/orders/:id', ordersController.delete);

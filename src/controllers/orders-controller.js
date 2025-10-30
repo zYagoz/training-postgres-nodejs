@@ -19,5 +19,17 @@ export const ordersController = {
         } else{
             res.staus(200).json(newOrder)
         }
+    },
+
+    //GET /orders/:id
+    show: async (req,res) =>{
+        const order = await Order.findById(req.params.id);
+        res.json(order)
+    },
+
+    //DELETE /orders/:id
+    delete: async (req,res) =>{
+        const result = await Order.delete(req.params.id);
+        res.json(result);
     }
 }
